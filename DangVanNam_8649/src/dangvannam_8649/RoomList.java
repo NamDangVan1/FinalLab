@@ -12,7 +12,9 @@ public class RoomList {
 
     public void updateRoomById(String id) {
         for (IRoom room : roomList) {
-            room.updateRoomById(id);
+            if (((Room) room).getId().equals(id)) {
+                room.updateRoomById(id);
+            }
         }
     }
 

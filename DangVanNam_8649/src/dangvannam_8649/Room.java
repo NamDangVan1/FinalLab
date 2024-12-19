@@ -54,6 +54,7 @@ public abstract class Room implements IRoom {
     public void updateRoomById(String id) {
         if (this.id.equals(id)) {
             try {
+                sc.nextLine();
                 System.out.print("Name: ");
                 name = sc.nextLine();
                 System.out.print("Base cost: ");

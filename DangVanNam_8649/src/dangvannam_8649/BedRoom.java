@@ -12,15 +12,17 @@ public class BedRoom extends Room {
     @Override
     public void enterRoomInfo() {
         super.enterRoomInfo();
-        System.out.println("Number of beds: ");
+        System.out.print("Number of beds: ");
         numberOfBeds = sc.nextInt();
     }
 
     @Override
     public void updateRoomById(String id) {
-        super.updateRoomById(id);
-        System.out.println("Number of beds: ");
-        numberOfBeds = sc.nextInt();
+        if (super.getId().equals(id)) {
+            super.updateRoomById(id);
+            System.out.print("Number of beds: ");
+            numberOfBeds = sc.nextInt();
+        }
     }
 
     @Override

@@ -12,15 +12,17 @@ public class MeetingRoom extends Room {
     @Override
     public void enterRoomInfo() {
         super.enterRoomInfo();
-        System.out.println("Capacity: ");
+        System.out.print("Capacity: ");
         capacity = sc.nextInt();
     }
 
     @Override
     public void updateRoomById(String id) {
-        super.updateRoomById(id);
-        System.out.println("Capacity: ");
-        capacity = sc.nextInt();
+        if (super.getId().equals(id)) {
+            super.updateRoomById(id);
+            System.out.print("Capacity: ");
+            capacity = sc.nextInt();
+        }
     }
 
     @Override

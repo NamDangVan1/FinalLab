@@ -9,7 +9,7 @@ public class Processor {
         RoomList roomList = new RoomList();
         int choice;
         do {
-            System.out.println("1. Add a new meeting room.\n"
+            System.out.print("1. Add a new meeting room.\n"
                     + "2. Add a new bedroom.\n"
                     + "3. Update Room by id.\n"
                     + "4. Delete Room by id.\n"
@@ -33,17 +33,17 @@ public class Processor {
                     roomList.addRoom(bedRoom);
                     break;
                 case 3:
-                    System.out.println("Enter id: ");
+                    System.out.print("Enter id: ");
                     String idToUpdate = sc.next();
                     roomList.updateRoomById(idToUpdate);
                     break;
                 case 4:
-                    System.out.println("Enter id: ");
+                    System.out.print("Enter id: ");
                     String idToDelete = sc.next();
                     roomList.deleteRoomById(idToDelete);
                     break;
                 case 5:
-                    System.out.println("Enter id: ");
+                    System.out.print("Enter id: ");
                     String idToFind = sc.next();
                     roomList.findRoomById(idToFind);
                     break;
@@ -58,6 +58,7 @@ public class Processor {
                         System.out.println("No room in List");
                     } else {
                         mostExpensiveRoom.displayDetails();
+                        System.out.println("Cost : " + mostExpensiveRoom.calculateCost());
                     }
                     break;
                 case 8:
